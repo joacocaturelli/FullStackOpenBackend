@@ -1,0 +1,28 @@
+{
+  "name": "phonebook-api",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/joacocaturelli/FullStackOpenBackend#readme",
+  "bugs": {
+    "url": "https://github.com/joacocaturelli/FullStackOpenBackend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joacocaturelli/FullStackOpenBackend.git"
+  },
+  "license": "ISC",
+  "author": "Joaquin Caturelli",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
