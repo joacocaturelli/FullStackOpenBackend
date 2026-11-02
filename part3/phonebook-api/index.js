@@ -1,9 +1,12 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(
   morgan(function (tokens, req, res) {
     return [
@@ -133,8 +136,8 @@ app.get("/info", (req, res) => {
   res.send(`<p>Phonebooh has info for ${persons.length} people</p><p>${date}.</p>`);
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`);
+  console.log(`server running on http://localhost:${PORT}`);
 });
